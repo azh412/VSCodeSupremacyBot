@@ -17,7 +17,7 @@ async def on_message(message):
     editors = db.keys()
     if words[0] == "!@#$%^&*()editor":
       try:
-        db[f"{words[1]}"] = 0
+        db[f"{words[1]}"].lower() = 0
         await message.channel.send(f"{words[1]}, hm.")
       except:
         pass
